@@ -8,26 +8,50 @@ const AvailableMeals = () => {
     {
     id: 1,
     name: "Burger",
-    description: "Cheese Burger",
-    price: 2.5,
+    description: "Classic cheeseburger with fresh veggies and signature sauce.",
+    price: 150,
   },
     {
     id: 2,
     name: "Pizza",
-    description: "Cheese Pizza",
-    price: 5,
+    description: "Hot, cheesy pizza with fresh toppings and a crispy crust.",
+    price: 250,
   },
     {
     id: 3,
     name: "Pasta",
-    description: "White Cheese Pasta",
-    price: 7,
+    description: "Delicious pasta in smooth, cheesy sauce—every bite is comfort in a bowl.",
+    price: 200,
   },
     {
     id: 4,
     name: "Sushi",
-    description: "Delicious sushi",
-    price: 10,
+    description: "Delicious hand-rolled sushi packed with flavor and freshness",
+    price: 300,
+  },
+  {
+    id: 5,
+    name: "Maggie",
+    description: "Instant noodles tossed with veggies and masala for a quick and tasty treat.",
+    price: 100,
+  },
+  {
+  id: 6,
+    name: "French Fries",
+    description: "Crispy golden French fries, perfectly salted and served hot—everyone’s favorite snack!",
+    price: 100,
+  },
+  {
+    id: 7,
+    name: "Chicken Nuggets",
+    description: "Crispy on the outside, tender on the inside—classic chicken nuggets that hit the spot every time.",
+    price: 150,
+  },
+   {
+  id: 8,
+    name: "Chicken Franky",
+    description: "Juicy chicken, zesty chutneys, and pickled onions in a handheld delight.",
+    price: 70,
   },
 ];
   const [meals, setMeals] = useState(foods);

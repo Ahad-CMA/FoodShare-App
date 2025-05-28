@@ -8,6 +8,7 @@ const ConfirmDonateScreen = () => {
   const [isDonate, setIsDonate] = useState(false);
   const navigate = useNavigate();
   const theme = createTheme();
+  const times = ["09:00-12:00","12:00-15:00","15:00-18:00","18:00-21:00","21:00-00:00"];
 
 theme.typography.h3 = {
   fontSize: '1.2rem',
@@ -108,11 +109,7 @@ theme.typography.h3 = {
           value={timeSlot}
           onChange={handleChange}
         >
-          <FormControlLabel value="09:00-12:00" control={<Radio />} label="09:00-12:00" />
-          <FormControlLabel value="12:00-15:00" control={<Radio />} label="12:00-15:00" />
-          <FormControlLabel value="15:00-18:00" control={<Radio />} label="15:00-18:00" />
-          <FormControlLabel value="18:00-21:00" control={<Radio />} label="18:00-21:00" />
-          <FormControlLabel value="21:00-00:00" control={<Radio />} label="21:00-00:00" />
+          {times.map(el => <FormControlLabel value={el} control={<Radio />} label={el} />)}
         </RadioGroup>
         <Button variant="contained" sx={{backgroundColor:"#8a2b06", marginRight:"1rem"}} onClick={submitDonateFoodHandler}>Confirm</Button>
         <Button variant="outlined" sx={{color:"#8a2b06", borderColor:"#8a2b06"}} onClick={()=> navigate("/meals")}>Cancel</Button>
