@@ -2,6 +2,17 @@ import React, { useEffect, useState } from "react";
 import Card from "../UI/Card";
 import classes from "./AvailableMeals.module.css";
 import MealItem from "./MealItem/MealItem";
+import pizza from "./MealItem/pizza.webp";
+import Burger from "./MealItem/burger.jpg";
+import pasta from "./MealItem/pasta.jpg";
+import sushi from "./MealItem/sushi.jpg";
+import Maggie from "./MealItem/maggie.webp";
+import fries from "./MealItem/fries.jpg";
+import nuggets from "./MealItem/nuggets.avif";
+import Franky from "./MealItem/franky.webp";
+
+
+
 
 const AvailableMeals = () => {
   const foods = [
@@ -10,48 +21,56 @@ const AvailableMeals = () => {
     name: "Burger",
     description: "Classic cheeseburger with fresh veggies and signature sauce.",
     price: 150,
+    image:Burger,
   },
     {
     id: 2,
     name: "Pizza",
     description: "Hot, cheesy pizza with fresh toppings and a crispy crust.",
     price: 250,
+    image: pizza,
   },
     {
     id: 3,
     name: "Pasta",
     description: "Delicious pasta in smooth, cheesy sauce—every bite is comfort in a bowl.",
     price: 200,
+    image: pasta,
   },
     {
     id: 4,
     name: "Sushi",
     description: "Delicious hand-rolled sushi packed with flavor and freshness",
     price: 300,
+    image : sushi,
   },
   {
     id: 5,
     name: "Maggie",
     description: "Instant noodles tossed with veggies and masala for a quick and tasty treat.",
     price: 100,
+    image : Maggie,
   },
   {
   id: 6,
     name: "French Fries",
     description: "Crispy golden French fries, perfectly salted and served hot—everyone’s favorite snack!",
     price: 100,
+    image : fries,
   },
   {
     id: 7,
     name: "Chicken Nuggets",
     description: "Crispy on the outside, tender on the inside—classic chicken nuggets that hit the spot every time.",
     price: 150,
+    image : nuggets,
   },
    {
   id: 8,
     name: "Chicken Franky",
     description: "Juicy chicken, zesty chutneys, and pickled onions in a handheld delight.",
     price: 70,
+    image : Franky, 
   },
 ];
   const [meals, setMeals] = useState(foods);
@@ -116,6 +135,7 @@ const AvailableMeals = () => {
       name={meal.name}
       description={meal.description}
       price={meal.price}
+      image={meal.image}
     />
   ));
 

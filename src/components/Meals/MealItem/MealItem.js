@@ -3,6 +3,7 @@ import CartContext from "../../../store/cart-context";
 import classes from "./MealItem.module.css";
 import MealItemForm from "./MealItemForm";
 
+
 const MealItem = (props) => {
   console.log(props);
   const cartCtx = useContext(CartContext);
@@ -21,6 +22,7 @@ const MealItem = (props) => {
   return (
     <li className={classes.meal}>
       <div>
+        <img src={props.image} alt={props.name} className={classes.image} />
         <h3>{props.name}</h3>
         <div className={classes.description}>{props.description}</div>
         <div className={classes.price}>{price}</div>
